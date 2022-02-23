@@ -24,7 +24,7 @@
           <hr class="divider divider-light" />
 
           <ul class="list-group row list-group-horizontal-sm">
-            <a type="button" class="list-group-item col-3 px-1 my-1"
+            <a type="button" class="list-group-item col-sm-6 col-lg-4 col-xxl-3 my-1"
             v-for="(shop, index) in shops" :key="index"
             @click.prevent="chooseShop(shop)"
             >
@@ -33,7 +33,7 @@
           </ul>
         </div>
         <div class="col-lg-9 text-center mt-5">
-          <p>這麼多飲料店不知道要喝哪一間嗎？沒關係!可以隨機選一間幫你解決選擇障礙!!</p>
+          <p class="h4">這麼多飲料店不知道要喝哪一間嗎？沒關係!可以隨機選一間幫你解決選擇障礙!!</p>
           <a class="btn btn-dark btn-xl mb-4" href="#"
           @click.prevent="getOneShop()">隨機GO!</a>
         </div>
@@ -42,7 +42,7 @@
   </section>
   <!-- Call to action-->
   <section class="page-section" v-show="tempShop.title !== undefined" id="list">
-    <div class="container px-4 px-lg-5">
+    <div class="container px-4 px-lg-5" >
         <div class="text-end">
         <button class="btn btn-dark mb-1" type="button" @click.prevent="getOneShop()" >換一間</button>
       </div>
@@ -52,11 +52,11 @@
           <h5 class="card-title mt-3">電話： {{tempShop.phone}}</h5>
           <h5 class="card-title mt-3">營業時間： {{tempShop.opentime}}</h5>
           <h5 class="card-title mt-3">地址： {{tempShop.add}}</h5>
-          <div class="text-center" v-for="imageUrl in tempShop.imagesUrls" :key="imageUrl.id">
+          <div class="text-center " v-for="imageUrl in tempShop.imagesUrls" :key="imageUrl.id">
             <img
               :src="imageUrl"
               onerror="(this.src = 'https://i.imgur.com/xmiTQFW.png')"
-              class="img-fluid my-4   "
+              class="img-fluid my-4"
             />
           </div>
         </div>
@@ -144,4 +144,5 @@ header.masthead .h1 {
 .page-section {
   padding: 8rem 0;
 }
+
 </style>

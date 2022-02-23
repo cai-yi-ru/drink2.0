@@ -1,10 +1,10 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark"
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top"
   style="background-color: #7b7b7b">
     <div class="container">
       <a class="navbar-brand" type="button" @click="$router.push('/')">
         <font-awesome-icon :icon="['fas', 'cocktail']" class="me-1 py-1" />
-        <span>今天喝蝦咪2.0</span>
+        <span class="h4">今天喝蝦咪2.0</span>
       </a>
       <button
         class="navbar-toggler"
@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
           <a class="nav-item nav-link" type="button" @click="$router.push('/drink')"
-            ><span class="h5 text-light">店家名單管理</span></a
+            ><span class="h5" style="color:#7b7b7b">店家名單管理</span></a
           >
         </div>
       </div>
